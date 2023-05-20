@@ -1,0 +1,10 @@
+<html lang="en">
+  {{ partial "head.html" . }}
+  <body>
+    <div class="container py-3">
+      <main id="main">
+	{{ block "main" . }}{{ end }}
+      </main>
+    </div>
+  </body>
+</html>
