@@ -1,7 +1,7 @@
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="refresh" content="0;URL='https://camps.caedm.ca{{ .RelPermalink }}'" />
+    <meta http-equiv="refresh" content="0;URL='https://camps.caedm.ca{{ if eq .Kind "404" }}/{{else}}{{ .RelPermalink }}{{end}}'" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     {{ $css := "css/bootstrap.min.css" | relURL }}<link rel="stylesheet" href="{{ $css }}">
-    <title>{{ .Title }}</title>
+    <title>{{ .Title }} – {{ if not .IsHome }}{{ .Site.Title }}{{ else }}{{ .Site.Params.motto }}{{ end }}</title>
   </head>
